@@ -1,0 +1,343 @@
+/* Variáveis de Cores e Estilos */
+:root {
+    /* Cores Tech (Inspiradas em Kabum/Pichau) */
+    --cor-primaria: #0066ff; /* Azul Tech */
+    --cor-secundaria: #1a1a1a; /* Dark background */
+    --cor-destaque: #ff6600; /* Laranja de destaque */
+    
+    /* Cores Sustentáveis */
+    --eco-verde: #2ecc71;
+    --eco-verde-escuro: #27ae60;
+    
+    /* Cores de Apoio */
+    --cor-texto: #333;
+    --cinza-claro: #f4f4f4;
+    --branco: #ffffff;
+    
+    /* Espaçamentos e Bordas */
+    --largura-container: 1200px;
+    --raio-borda: 8px;
+    --transicao: all 0.3s ease;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cinza-claro);
+}
+
+.container {
+    max-width: var(--largura-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.conteudo-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-marca {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#logo-marca span {
+    color: var(--eco-verde);
+}
+
+.lista-navegacao {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.lista-navegacao a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.lista-navegacao a:hover {
+    color: var(--cor-primaria);
+}
+
+.link-eco {
+    color: var(--eco-verde) !important;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#campo-busca {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.icone-carrinho {
+    position: relative;
+    cursor: pointer;
+}
+
+#contador-carrinho {
+    background-color: var(--cor-destaque);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Seção Destaque (Hero) */
+.destaque {
+    background: linear-gradient(135deg, var(--cor-secundaria) 0%, #0044aa 100%);
+    color: var(--branco);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.conteudo-destaque h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.conteudo-destaque p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Botões */
+.botao {
+    padding: 12px 25px;
+    border-radius: var(--raio-borda);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transicao);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.botao-primario {
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+}
+
+.botao-primario:hover {
+    background-color: #0055dd;
+}
+
+.botao-secundario {
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+}
+
+.botao-verde {
+    background-color: var(--eco-verde);
+    color: var(--branco);
+}
+
+.botao-verde:hover {
+    background-color: var(--eco-verde-escuro);
+}
+
+/* Grade de Produtos */
+.produtos {
+    padding: 50px 0;
+}
+
+.titulo-secao {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    border-left: 5px solid var(--cor-primaria);
+    padding-left: 15px;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.cartao-produto {
+    background: var(--branco);
+    padding: 20px;
+    border-radius: var(--raio-borda);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    transition: var(--transicao);
+}
+
+.cartao-produto:hover {
+    transform: translateY(-5px);
+}
+
+.selo-produto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--eco-verde);
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.imagem-produto {
+    height: 150px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.info-produto h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.preco {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.botao-adicionar {
+    width: 100%;
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+/* Seção Sustentável (Eco) */
+.secao-sustentavel {
+    background-color: #e8f5e9;
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.container-sustentavel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.recursos-eco {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.recursos-eco li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.recursos-eco li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+}
+
+.acoes-eco {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: var(--raio-borda);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.grupo-entrada {
+    margin: 20px 0;
+}
+
+.grupo-entrada label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.grupo-entrada input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--raio-borda);
+}
+
+.grupo-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.mensagem-resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--raio-borda);
+    display: none;
+}
+
+.resultado-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.resultado-erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-sustentavel {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-navegacao {
+        display: none; /* Simplificação para protótipo */
+    }
+}

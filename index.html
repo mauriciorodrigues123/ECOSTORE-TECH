@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOSTORE TECH | Tecnologia Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importando uma fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho Principal -->
+    <header id="cabecalho-principal" class="cabecalho">
+        <div class="container conteudo-cabecalho">
+            <div class="logotipo">
+                <h1 id="logo-marca">ECOSTORE <span>TECH</span></h1>
+            </div>
+            
+            <nav class="menu-navegacao">
+                <ul class="lista-navegacao">
+                    <li><a href="#">Hardware</a></li>
+                    <li><a href="#">Periféricos</a></li>
+                    <li><a href="#">Computadores</a></li>
+                    <li><a href="#secao-eco" class="link-eco">Eco-Desconto</a></li>
+                </ul>
+            </nav>
+
+            <div class="acoes-cabecalho">
+                <input type="text" id="campo-busca" placeholder="O que você procura?">
+                <div class="icone-carrinho" id="botao-carrinho">
+                    <span>🛒</span>
+                    <span id="contador-carrinho">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero: Destaque Sustentável -->
+        <section class="destaque">
+            <div class="container">
+                <div class="conteudo-destaque">
+                    <h2>Tecnologia de ponta com consciência ambiental</h2>
+                    <p>Troque seu hardware antigo por descontos reais e ajude o planeta com o nosso descarte legal.</p>
+                    <a href="#secao-eco" class="botao botao-primario">Verificar meu Desconto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grade de Produtos -->
+        <section class="produtos container">
+            <h3 class="titulo-secao">Destaques da Semana</h3>
+            <div class="grade-produtos" id="lista-produtos">
+                <!-- Os produtos serão inseridos aqui ou mantidos estáticos para o protótipo -->
+                <article class="cartao-produto">
+                    <div class="selo-produto">ECO-READY</div>
+                    <div class="imagem-produto">🖼️</div>
+                    <div class="info-produto">
+                        <h4>Placa de Vídeo RTX 4060</h4>
+                        <p class="preco">R$ 1.899,00</p>
+                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="cartao-produto">
+                    <div class="selo-produto">ECO-READY</div>
+                    <div class="imagem-produto">🖼️</div>
+                    <div class="info-produto">
+                        <h4>Processador Ryzen 7 5700X</h4>
+                        <p class="preco">R$ 1.250,00</p>
+                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="cartao-produto">
+                    <div class="selo-produto">ECO-READY</div>
+                    <div class="imagem-produto">🖼️</div>
+                    <div class="info-produto">
+                        <h4>Memória RAM 16GB DDR4</h4>
+                        <p class="preco">R$ 350,00</p>
+                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+
+                <article class="cartao-produto">
+                    <div class="selo-produto">ECO-READY</div>
+                    <div class="imagem-produto">🖼️</div>
+                    <div class="info-produto">
+                        <h4>SSD NVMe 1TB</h4>
+                        <p class="preco">R$ 420,00</p>
+                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção de Sustentabilidade (Diferencial) -->
+        <section id="secao-eco" class="secao-sustentavel">
+            <div class="container">
+                <div class="container-sustentavel">
+                    <div class="info-sustentavel">
+                        <h3>Programa ECO-TECH</h3>
+                        <p>Temos duas formas de você economizar ajudando o meio ambiente:</p>
+                        <ul class="recursos-eco">
+                            <li><strong>Troca Inteligente:</strong> Se você comprou o produto conosco e quer fazer um upgrade, ganhe até 20% de desconto.</li>
+                            <li><strong>Descarte Legal:</strong> Traga qualquer componente eletrônico velho para descarte correto e ganhe um cupom de 5%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="acoes-eco" id="container-formulario-eco">
+                        <h4>Verificar Benefício</h4>
+                        <div class="grupo-entrada">
+                            <label for="serial-produto">Número de Série ou ID do Pedido</label>
+                            <input type="text" id="serial-produto" placeholder="Ex: ECO-12345">
+                        </div>
+                        <div class="grupo-botoes">
+                            <button id="btn-verificar-historico" class="botao botao-secundario">Verificar Compra</button>
+                            <button id="btn-reciclar" class="botao botao-verde">Solicitar Descarte</button>
+                        </div>
+                        <div id="resultado-eco" class="mensagem-resultado"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 ECOSTORE TECH - Tecnologia para você, cuidado para o mundo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
