@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOSTORE TECH | Tecnologia Sustentável</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Importando uma fonte moderna -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fontes Modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Barra Superior de Avisos -->
+    <div class="barra-topo">
+        <div class="container conteudo-barra-topo">
+            <span>🚚 Frete Grátis em compras acima de R$ 499</span>
+            <span>🌿 +500kg de e-lixo reciclados este mês</span>
+        </div>
+    </div>
+
     <!-- Cabeçalho Principal -->
     <header id="cabecalho-principal" class="cabecalho">
         <div class="container conteudo-cabecalho">
@@ -26,10 +34,16 @@
             </nav>
 
             <div class="acoes-cabecalho">
-                <input type="text" id="campo-busca" placeholder="O que você procura?">
+                <div class="container-busca">
+                    <input type="text" id="campo-busca" placeholder="O que você procura?">
+                    <button class="btn-busca">🔍</button>
+                </div>
                 <div class="icone-carrinho" id="botao-carrinho">
                     <span>🛒</span>
                     <span id="contador-carrinho">0</span>
+                </div>
+                <div class="usuario-menu">
+                    <span>👤 Minha Conta</span>
                 </div>
             </div>
         </div>
@@ -39,56 +53,148 @@
         <!-- Seção Hero: Destaque Sustentável -->
         <section class="destaque">
             <div class="container">
-                <div class="conteudo-destaque">
-                    <h2>Tecnologia de ponta com consciência ambiental</h2>
-                    <p>Troque seu hardware antigo por descontos reais e ajude o planeta com o nosso descarte legal.</p>
-                    <a href="#secao-eco" class="botao botao-primario">Verificar meu Desconto</a>
+                <div class="grade-destaque">
+                    <div class="conteudo-destaque">
+                        <span class="etiqueta-eco">Sustentabilidade & Performance</span>
+                        <h2>Tecnologia de ponta com consciência ambiental</h2>
+                        <p>Troque seu hardware antigo por descontos reais e ajude o planeta com o nosso programa de descarte legal certificado.</p>
+                        <div class="botoes-destaque">
+                            <a href="#produtos" class="botao botao-primario">Comprar Agora</a>
+                            <a href="#secao-eco" class="botao botao-outline">Saber Mais</a>
+                        </div>
+                    </div>
+                    <div class="imagem-destaque">
+                        <!-- Espaço para uma imagem ilustrativa ou ícone grande -->
+                        <div class="ilustracao-sustentavel">🌱💻</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Categorias Rápidas -->
+        <section class="categorias container">
+            <div class="grade-categorias">
+                <div class="item-categoria">
+                    <span class="icone-categoria">📼</span>
+                    <span>Placas de Vídeo</span>
+                </div>
+                <div class="item-categoria">
+                    <span class="icone-categoria">📟</span>
+                    <span>Processadores</span>
+                </div>
+                <div class="item-categoria">
+                    <span class="icone-categoria">💾</span>
+                    <span>Armazenamento</span>
+                </div>
+                <div class="item-categoria">
+                    <span class="icone-categoria">⌨️</span>
+                    <span>Periféricos</span>
+                </div>
+                <div class="item-categoria">
+                    <span class="icone-categoria">🖥️</span>
+                    <span>Monitores</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Diferenciais -->
+        <section class="diferenciais">
+            <div class="container grade-diferenciais">
+                <div class="card-diferencial">
+                    <span class="icone-diferencial">♻️</span>
+                    <h4>Logística Reversa</h4>
+                    <p>Coletamos seu produto velho na sua porta.</p>
+                </div>
+                <div class="card-diferencial">
+                    <span class="icone-diferencial">💎</span>
+                    <h4>Garantia ECO</h4>
+                    <p>Produtos revisados com 1 ano de garantia.</p>
+                </div>
+                <div class="card-diferencial">
+                    <span class="icone-diferencial">🛡️</span>
+                    <h4>Compra Segura</h4>
+                    <p>Seus dados e o planeta protegidos.</p>
+                </div>
+                <div class="card-diferencial">
+                    <span class="icone-diferencial">⚡</span>
+                    <h4>Envio Expresso</h4>
+                    <p>Logística otimizada para menor emissão de CO2.</p>
                 </div>
             </div>
         </section>
 
         <!-- Grade de Produtos -->
-        <section class="produtos container">
-            <h3 class="titulo-secao">Destaques da Semana</h3>
+        <section id="produtos" class="produtos container">
+            <div class="topo-secao">
+                <h3 class="titulo-secao">Ofertas em Destaque</h3>
+                <a href="#" class="ver-todos">Ver todos →</a>
+            </div>
             <div class="grade-produtos" id="lista-produtos">
-                <!-- Os produtos serão inseridos aqui ou mantidos estáticos para o protótipo -->
                 <article class="cartao-produto">
-                    <div class="selo-produto">ECO-READY</div>
+                    <div class="selo-produto">ECO-VALIDADE</div>
                     <div class="imagem-produto">🖼️</div>
                     <div class="info-produto">
+                        <span class="categoria-produto">Hardware</span>
                         <h4>Placa de Vídeo RTX 4060</h4>
+                        <div class="avaliacao">⭐⭐⭐⭐⭐ (42)</div>
+                        <p class="preco-antigo">R$ 2.199,00</p>
                         <p class="preco">R$ 1.899,00</p>
-                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                        <p class="parcelamento">10x de R$ 189,90 sem juros</p>
+                        <div class="botoes-produto">
+                            <button class="botao botao-primario botao-comprar">Comprar Agora</button>
+                            <button class="botao botao-adicionar">🛒</button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="cartao-produto">
-                    <div class="selo-produto">ECO-READY</div>
+                    <div class="selo-produto">ECO-VALIDADE</div>
                     <div class="imagem-produto">🖼️</div>
                     <div class="info-produto">
+                        <span class="categoria-produto">Hardware</span>
                         <h4>Processador Ryzen 7 5700X</h4>
+                        <div class="avaliacao">⭐⭐⭐⭐⭐ (28)</div>
+                        <p class="preco-antigo">R$ 1.450,00</p>
                         <p class="preco">R$ 1.250,00</p>
-                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                        <p class="parcelamento">10x de R$ 125,00 sem juros</p>
+                        <div class="botoes-produto">
+                            <button class="botao botao-primario botao-comprar">Comprar Agora</button>
+                            <button class="botao botao-adicionar">🛒</button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="cartao-produto">
-                    <div class="selo-produto">ECO-READY</div>
+                    <div class="selo-produto">ECO-VALIDADE</div>
                     <div class="imagem-produto">🖼️</div>
                     <div class="info-produto">
+                        <span class="categoria-produto">Memória</span>
                         <h4>Memória RAM 16GB DDR4</h4>
+                        <div class="avaliacao">⭐⭐⭐⭐ (15)</div>
+                        <p class="preco-antigo">R$ 410,00</p>
                         <p class="preco">R$ 350,00</p>
-                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                        <p class="parcelamento">3x de R$ 116,66 sem juros</p>
+                        <div class="botoes-produto">
+                            <button class="botao botao-primario botao-comprar">Comprar Agora</button>
+                            <button class="botao botao-adicionar">🛒</button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="cartao-produto">
-                    <div class="selo-produto">ECO-READY</div>
+                    <div class="selo-produto">ECO-VALIDADE</div>
                     <div class="imagem-produto">🖼️</div>
                     <div class="info-produto">
-                        <h4>SSD NVMe 1TB</h4>
+                        <span class="categoria-produto">Armazenamento</span>
+                        <h4>SSD NVMe 1TB High-Speed</h4>
+                        <div class="avaliacao">⭐⭐⭐⭐⭐ (33)</div>
+                        <p class="preco-antigo">R$ 499,00</p>
                         <p class="preco">R$ 420,00</p>
-                        <button class="botao botao-adicionar">Adicionar ao Carrinho</button>
+                        <p class="parcelamento">4x de R$ 105,00 sem juros</p>
+                        <div class="botoes-produto">
+                            <button class="botao botao-primario botao-comprar">Comprar Agora</button>
+                            <button class="botao botao-adicionar">🛒</button>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -99,16 +205,24 @@
             <div class="container">
                 <div class="container-sustentavel">
                     <div class="info-sustentavel">
+                        <span class="badge-verde">Nosso Compromisso</span>
                         <h3>Programa ECO-TECH</h3>
-                        <p>Temos duas formas de você economizar ajudando o meio ambiente:</p>
+                        <p>A tecnologia avança rápido, mas o planeta não consegue acompanhar sozinho. Nosso sistema de economia circular garante que nada seja desperdiçado.</p>
                         <ul class="recursos-eco">
-                            <li><strong>Troca Inteligente:</strong> Se você comprou o produto conosco e quer fazer um upgrade, ganhe até 20% de desconto.</li>
-                            <li><strong>Descarte Legal:</strong> Traga qualquer componente eletrônico velho para descarte correto e ganhe um cupom de 5%.</li>
+                            <li>
+                                <strong>Troca Inteligente:</strong> 
+                                <p>Upgrade consciente. Se comprou conosco, seu produto vale ouro na próxima compra.</p>
+                            </li>
+                            <li>
+                                <strong>Descarte Legal:</strong> 
+                                <p>Destinação correta para componentes queimados ou obsoletos com certificação ambiental.</p>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="acoes-eco" id="container-formulario-eco">
                         <h4>Verificar Benefício</h4>
+                        <p class="instrucao-form">Insira os dados abaixo para calcular seu desconto sustentável.</p>
                         <div class="grupo-entrada">
                             <label for="serial-produto">Número de Série ou ID do Pedido</label>
                             <input type="text" id="serial-produto" placeholder="Ex: ECO-12345">
@@ -122,11 +236,49 @@
                 </div>
             </div>
         </section>
+
+
+        </section>
     </main>
 
     <footer class="rodape">
         <div class="container">
-            <p>&copy; 2026 ECOSTORE TECH - Tecnologia para você, cuidado para o mundo.</p>
+            <div class="grade-rodape">
+                <div class="coluna-rodape">
+                    <h4 id="logo-rodape">ECOSTORE <span>TECH</span></h4>
+                    <p>A maior loja de tecnologia sustentável do Brasil.</p>
+                    <div class="redes-sociais">
+                        <span>📱</span> <span>📸</span> <span>🐦</span> <span>📺</span>
+                    </div>
+                </div>
+                <div class="coluna-rodape">
+                    <h5>Categorias</h5>
+                    <ul>
+                        <li><a href="#">Hardware</a></li>
+                        <li><a href="#">Periféricos</a></li>
+                        <li><a href="#">PC Gamer</a></li>
+                        <li><a href="#">Notebooks</a></li>
+                    </ul>
+                </div>
+                <div class="coluna-rodape">
+                    <h5>Institucional</h5>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Política de Troca</a></li>
+                        <li><a href="#">Descarte Legal</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="coluna-rodape">
+                    <h5>Pagamento</h5>
+                    <div class="formas-pagamento">
+                        💳 💸 🏦 📱
+                    </div>
+                </div>
+            </div>
+            <div class="direitos-autorais">
+                <p>&copy; 2026 ECOSTORE TECH - Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+            </div>
         </div>
     </footer>
 
